@@ -1,6 +1,9 @@
 package mypackage;
-import java.util.LocalDateTime;
-class Event extends Trackables{
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.ArrayList;
+import java.time.format.DateTimeFormatter;
+class Event extends Trackable{
     private LocalDateTime reservationTime;
     private int frequenceOfReminder;
 
@@ -12,6 +15,7 @@ class Event extends Trackables{
 
     @Override 
     String getSummary(){
-        return (title + " on " + date + '\n' + '\t' + discription + '\n');
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        return (title + " on " + date.format(formatter) + '\n' + '\t' + discription + '\n');
     }
 }
