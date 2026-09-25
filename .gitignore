@@ -1,0 +1,12 @@
+.vs/
+x64/
+x86/
+Debug/
+Release/
+*.user
+*.ipch
+*.pch
+*.obj
+*.exe
+*.dll
+x64/
